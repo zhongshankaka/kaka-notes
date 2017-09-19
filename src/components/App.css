@@ -1,0 +1,471 @@
+.app {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+/*导航*/
+.head {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: rgb(37, 124, 133);
+}
+
+.logo {
+  float: left;
+  margin-left: 15px;
+  font-weight: normal;
+  font-size: 15px;
+  color: #fff;
+}
+
+.head-nav {
+  overflow: hidden;
+  float: right;
+  margin-right: 5px;
+  list-style: none;
+}
+
+.head-nav li {
+  float: left;
+  margin-right: 10px;
+}
+
+.head-nav li a {
+  display: block;
+  height: inherit;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.main-screen {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+/*笔记栏*/
+.notes-box {
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #fafafa;
+  -webkit-transition: width .5s;
+  transition:width .5s;
+}
+
+.notes-box>h1 {
+    padding: 10px 0;
+    text-indent: 15px;
+    font-size: 16px;
+    font-weight: normal;
+    height: 30px;
+    line-height: 30px;
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(0,0,0,.15);
+}
+
+.notes-box>.add-new {
+  position: fixed;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  left: 10%;
+  margin-left: 0;
+  bottom: 25px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: rgb(180, 208, 210);
+  color: #fff;
+  box-shadow: 0px 0px 20px 5px rgba(0,0,0,.1);
+  z-index: 99;
+}
+
+.notes-box>.add-new:hover {
+  background-color: rgb(37, 124, 133);
+  color: #fff;
+}
+
+p.key {
+  margin: 30px 0;
+  text-align: center;
+  color: #47423f;
+}
+
+.notes-list {
+  list-style: none;
+}
+
+.notes-list li {
+  padding: 5px 15px;
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
+}
+
+.notes-list li .note-box {
+  width: 100%;
+}
+
+.notes-list li .note-box p {
+  display: none;
+  color: #47423f;
+}
+
+.notes-list .note-box span {
+  display: block;
+  line-height: 30px;
+}
+
+.notes-list .note-box span i {
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.notes-list .note-title {
+  margin-bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notes-list li:hover {
+    background-color: #fff;
+    color: #47423f;
+}
+
+.notes-list li.active {
+    background-color: #fff;
+    color: #47423f;
+}
+
+/*预览*/
+.preview-wrap{
+    padding: 10px;
+}
+
+.preview-wrap h1 {
+    margin-bottom: 10px;
+    color: #47423f;
+}
+.preview-wrap p {
+    line-height: 1.5;
+    color: #8e857e;
+}
+
+.preview-box {
+  position: relative;
+  float: left;
+  width: 75%;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 100;
+  background-color: #fff;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+
+.preview-top {
+  left: 25%;
+  height: 50px;
+  line-height: 50px;
+  text-align: right;
+  box-shadow: 0 1px 5px rgba(0,0,0,.15);
+}
+
+.preview-top>i{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 100%;
+}
+
+.preview-top>i:active,.preview-top>i:hover{
+    background-color: rgb(37, 124, 133);
+    color: #fff;
+}
+
+a.modify-btn.hidden,a.delete-btn.hidden {
+  display: none;
+}
+
+a.modify-btn.show,a.delete-btn.show {
+    display: inline-block;
+    padding: 0 7px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+a.delete-btn{
+    margin-right: 20px;
+}
+
+a.modify-btn:hover,a.modify-btn:active{
+    background-color: rgb(37, 124, 133);
+    color: #fff;
+}
+
+a.delete-btn:hover,a.delete-btn:active{
+    background-color: red;
+    color: #fff;
+}
+
+/*弹窗*/
+.layer-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+}
+
+.layer-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  z-index: 100;
+}
+.layer-left,.layer-right{
+    padding: 5px;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.layer-left{
+  float: left;
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.layer-right{
+  float: right;
+}
+.layer-preview{
+    position: absolute;
+    top: 46px;
+    left: 5px;
+    right: 5px;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.layer-left>h3,.layer-right>h3{
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px solid #f4efea;
+  margin-bottom: 10px;
+}
+.icon-save,.icon-close{
+    position: absolute;
+    top: 0;
+    display: block;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    z-index: 101;
+    cursor: pointer;
+    border-radius: 100%;
+}
+.icon-save{
+    right: 50px;
+}
+.icon-close{
+    right: 10px;
+}
+.icon-save:hover,.icon-close:hover{
+    background-color: rgb(37, 124, 133);
+    color: #fff;
+}
+
+.input-box{
+  margin-bottom: 10px;
+  height: 50px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.input-box input{
+  display: block;
+  width: 100%;
+  height: inherit;
+  line-height: 50px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.textarea-box{
+  position: absolute;
+  top: 107px;
+  left: 5px;
+  right: 5px;
+  bottom: 0;
+}
+.textarea-box textarea{
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  outline: none;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+}
+
+.layer-preview{
+  line-height: 1.6;
+}
+.markdown-body>*:first-child{
+    text-align: center;
+}
+
+/*滑动*/
+.notes-box.toleft{
+    width: 0;
+}
+.notes-box.toright{
+    width: 25%;
+}
+
+.preview-box.toleft {
+  width: 100%;
+}
+
+.preview-box.toright {
+  width: 75%;
+}
+
+/*移动端适配*/
+@media screen and (max-width: 480px) {
+    .head{
+        height: 50px;
+        line-height: 50px;
+    }
+    main{
+        top: 50px;
+    }
+
+    .notes-box{
+        float: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+        -webkit-transition: left .5s;
+        transition: left .5s;
+    }
+    .notes-box h1{
+        display: none;
+    }
+    .notes-box>.add-new{
+        left: 50%;
+        background-color: #24292e;
+    }
+
+    .notes-list li{
+        border-bottom: none;
+        margin-bottom: 10px;
+        box-shadow: 0 1px 5px rgba(0,0,0,.15);
+    }
+
+    .notes-list .listbox p{
+        display: block;
+    }
+
+    .notes-list .listtitle{
+        margin-bottom: 5px;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .preview-box{
+        float: none;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 100%;
+        top: -100%;
+        -webkit-transition: left .5s;
+        transition: left .5s;
+    }
+
+    /* 右边预览区域*/
+    .preview-top{
+        height: 40px;
+        line-height: 40px;
+    }
+    .preview-top>i{
+        display: block;
+        left: 5px;
+        top: 5px;
+    }
+    a.modify-btn,a.delete-btn,.full-btn{
+        margin: 5px;
+    }
+    a.delete-btn{
+        margin-right: 5px;
+    }
+
+    .layer-left{
+        float: none;
+        width: 100%;
+        border-right: none;
+    }
+    .layer-right{
+        display: none;
+    }
+    .input-box{
+        height: 40px;
+    }
+    .input-box input{
+        line-height: 40px;
+    }
+    .textarea-box{
+        top: 97px;
+    }
+
+    /* 滑动动画 */
+    .notes-box.toleft{
+        left: -100%;
+        width: 100%
+    }
+    .notes-box.toright{
+        left: 0;
+        width: 100%;
+    }
+    .preview-box.toleft{
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .preview-box.toright{
+        left: 100%;
+        width: 100%;
+    }
+}

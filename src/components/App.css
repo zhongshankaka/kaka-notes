@@ -136,7 +136,7 @@ p.key {
 }
 
 .notes-list .note-title {
-  margin-bottom: 0;
+  margin-bottom: 5px;
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -366,8 +366,8 @@ a.delete-btn:hover,a.delete-btn:active{
         height: 50px;
         line-height: 50px;
     }
-    main{
-        top: 50px;
+    .main-screen {
+      top: 50px;
     }
 
     .notes-box{
@@ -384,8 +384,8 @@ a.delete-btn:hover,a.delete-btn:active{
         display: none;
     }
     .notes-box>.add-new{
-        left: 50%;
-        background-color: #24292e;
+        left: 43%;
+        background-color: rgb(37, 124, 133);
     }
 
     .notes-list li{
@@ -394,11 +394,11 @@ a.delete-btn:hover,a.delete-btn:active{
         box-shadow: 0 1px 5px rgba(0,0,0,.15);
     }
 
-    .notes-list .listbox p{
+    .notes-list .note-box p{
         display: block;
     }
 
-    .notes-list .listtitle{
+    .notes-list .note-title{
         margin-bottom: 5px;
         width: 100%;
         font-size: 18px;
@@ -415,7 +415,6 @@ a.delete-btn:hover,a.delete-btn:active{
         transition: left .5s;
     }
 
-    /* 右边预览区域*/
     .preview-top{
         height: 40px;
         line-height: 40px;
@@ -425,8 +424,8 @@ a.delete-btn:hover,a.delete-btn:active{
         left: 5px;
         top: 5px;
     }
-    a.modify-btn,a.delete-btn,.full-btn{
-        margin: 5px;
+    a.modify-btn,a.delete-btn{
+        margin: 20px;
     }
     a.delete-btn{
         margin-right: 5px;

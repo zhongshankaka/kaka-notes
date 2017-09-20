@@ -24,7 +24,7 @@ export const addNote = (title, content, id, time) => {
   if (id === undefined && time === undefined) {
     return {
       type: ADD_NOTE,
-      id: noteId,
+      id: noteId++,
       title,
       content,
       time: moment().format('YYYY-MM-DD HH:mm'),

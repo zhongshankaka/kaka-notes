@@ -11,11 +11,6 @@ html{
   -webkit-text-size-adjust: 100%;
 }
 
-a{
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
-
 *:active{
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

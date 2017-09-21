@@ -5,6 +5,7 @@ import { deleteNote, showEditer } from '../actions/note'
 const mapStateToProps = (state, ownProps) => ({
   currentNote: state.cnote,
   isShowEditer: state.isShowEditer,
+  isShowToolbar: state.isShowToolbar,
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

@@ -9,12 +9,12 @@ class List extends Component {
 
   render() {
     let listData = this.props.listData
-    let showNoteDetail = this.props.showNoteDetail
+    let showNotesList = this.props.showNotesList
     let changeStatusShow = this.props.changeStatusShow
     let noteClick = this.props.noteClick
     let addBtnClick = this.props.addBtnClick
     let isShowLayer = this.props.isShowLayer
-    let showListStyle = showNoteDetail ? 'toleft' : 'toright'
+    let showListStyle = showNotesList ? 'toright' : 'toleft'
     return (
       <div className={"notes-box " + showListStyle}>
         <h1>所有笔记</h1>
@@ -28,7 +28,7 @@ class List extends Component {
                  clsName={clsName} key={item.id}
                  id={item.id} title={item.title} time={item.time}
                  content={(item.content.length>60) ? (item.content.substring(0, 60)+'...') : item.content}
-                 showNoteDetail={showNoteDetail} changeStatusShow={changeStatusShow} onClick={noteClick} />
+                 showNotesList={showNotesList} changeStatusShow={changeStatusShow} onClick={noteClick} />
              )
            })}
          </ul>

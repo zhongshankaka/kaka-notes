@@ -12,14 +12,14 @@ class Root extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      showNoteDetail: false,
+      showNotesList: true,
     }
 
   }
 
   changeStatusShow(status) {
     this.setState({
-      showNoteDetail: status,
+      showNotesList: status,
     })
   }
 
@@ -31,10 +31,10 @@ class Root extends Component {
         <Head></Head>
         <div className="main-screen">
           <ContainerList
-            showNoteDetail={this.state.showNoteDetail}
+            showNotesList={this.state.showNotesList}
             changeStatusShow={this.changeStatusShow.bind(this)}/>
           <ContainerPreview
-            showNoteDetail={this.state.showNoteDetail}
+            showNotesList={this.state.showNotesList}
             changeStatusShow={this.changeStatusShow.bind(this)}/>
         </div>
         {layer}

@@ -7,13 +7,13 @@ export default class Preview extends Component {
   }
 
   render() {
-    let showListStyle = this.props.showNoteDetail ? "toleft" : "toright"
-    let showToolbarStyle = this.props.showNoteDetail ? "show" : "hidden"
+    let showListStyle = this.props.showNotesList ? "toright" : "toleft"
+    let showToolbarStyle = this.props.isShowToolbar ? "show" : "hidden"
     return (
       <div className={"preview-box " + showListStyle}>
         <div className="preview-top">
           <i className="iconfont"
-             onClick={this.props.changeStatusShow.bind(this, !this.props.showNoteDetail)} >&#xe65f;</i>
+             onClick={this.props.changeStatusShow.bind(this, !this.props.showNotesList)} >&#xe65f;</i>
           <a title="编辑"
              className={"modify-btn iconfont " + showToolbarStyle}
              onClick={() => {
@@ -25,7 +25,7 @@ export default class Preview extends Component {
              const _id = this.props.currentNote.id
              if (_id === undefined) return
              this.props.deleteClick(_id)
-             this.props.changeStatusShow(!this.props.showNoteDetail)}}>&#xe74b;</a>
+             this.props.changeStatusShow(!this.props.showNotesList)}}>&#xe74b;</a>
         </div>
         <div className="preview-wrap markdown-body"
              dangerouslySetInnerHTML={{ __html: marked(`${this.props.currentNote.title ? '# ' + this.props.currentNote.title : ''}\n\n${this.props.currentNote.content ? this.props.currentNote.content : ''}`) }}></div>

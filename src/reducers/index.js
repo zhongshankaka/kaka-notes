@@ -6,8 +6,9 @@ const localCurrentNote = getStorage('cnote')
 const initialState = {
   notes: localNotes || [],
   cnote: localCurrentNote || {},
-  showLayer: false,
-  showEditer: false,
+  isShowLayer: false,
+  isShowEditer: false,
+  isShowToolbar: false,
 }
 
 const note = (state = {}, action) => {
@@ -54,8 +55,10 @@ const noteApp = (state = initialState, action) => {
     case ADD_NOTE:
       let _notes = notes(state.notes, action)
       setStorage('notes', JSON.stringify(_notes))
+      setStorage('isShowToolbar', false)
       return Object.assign({}, state, {
-        notes: _notes
+        notes: _notes,
+        isShowToolbar: false,
       })
     case SHOW_NOTE:
       const notesArr = state.notes.map((item) => {
@@ -70,19 +73,23 @@ const noteApp = (state = initialState, action) => {
 
       setStorage('notes', JSON.stringify(notesArr))
       setStorage('cnote', _cnote)
+      setStorage('isShowToolbar', true)
 
       return Object.assign({}, state, {
         notes: notesArr,
         cnote: _cnote,
+        isShowToolbar: true,
       })
       case DELETE_NOTE:
         let newnotes = state.notes.filter(item => item.id !== action.id)
         setStorage('notes', JSON.stringify(newnotes))
         setStorage('cnote', {})
+        setStorage('isShowToolbar', false)
 
         return Object.assign({}, state, {
           notes: newnotes,
           cnote: {},
+          isShowToolbar: false,
         })
       case SHOW_LAYER:
         return Object.assign({}, state, {

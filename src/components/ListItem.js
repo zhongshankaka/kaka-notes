@@ -11,7 +11,7 @@ class ListItem extends Component {
           data-id={this.props.id}
           onClick={() => {
           this.props.onClick(this.props.id)
-          this.props.changeStatusShow(!this.props.showNoteDetail)
+          this.props.changeStatusShow(!this.props.showNotesList)
       }}>
         <div className="note-box"></div>
           <h3 className="note-title">{this.props.title}</h3>

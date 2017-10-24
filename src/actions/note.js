@@ -40,7 +40,6 @@ export const addNote = (title, content, id, time) => {
   }
 }
 
-// 删除一篇笔记
 export const deleteNote = (id) => {
   return {
     type: DELETE_NOTE,
@@ -48,7 +47,6 @@ export const deleteNote = (id) => {
   }
 }
 
-// 预览一篇笔记
 export const showNote = (id) => {
   return {
     type: SHOW_NOTE,
@@ -56,7 +54,6 @@ export const showNote = (id) => {
   }
 }
 
-// 显示浮出层
 export const showLayer = (isShowLayer) => {
   return {
     type: SHOW_LAYER,
@@ -64,7 +61,6 @@ export const showLayer = (isShowLayer) => {
   }
 }
 
-// 显示编辑浮出层
 export const showEditer = (isShowEditer) => {
   return {
     type: SHOW_EDITER,

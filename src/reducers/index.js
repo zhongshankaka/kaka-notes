@@ -14,12 +14,14 @@ const initialState = {
 const note = (state = {}, action) => {
   switch (action.type) {
     case ADD_NOTE:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         id: action.id,
+        isNew: action.isNew,
         title: action.title,
         content: action.content,
         time: action.time,
-      })
+      }
     default:
       return state
   }
@@ -56,10 +58,11 @@ const noteApp = (state = initialState, action) => {
       let _notes = notes(state.notes, action)
       setStorage('notes', JSON.stringify(_notes))
       setStorage('isShowToolbar', false)
-      return Object.assign({}, state, {
+      return {
+        ...state,
         notes: _notes,
         isShowToolbar: false,
-      })
+      }
     case SHOW_NOTE:
       const notesArr = state.notes.map((item) => {
         if (item.id === action.id) {
@@ -74,31 +77,33 @@ const noteApp = (state = initialState, action) => {
       setStorage('notes', JSON.stringify(notesArr))
       setStorage('cnote', _cnote)
       setStorage('isShowToolbar', true)
-
-      return Object.assign({}, state, {
+      return {
+        ...state,
         notes: notesArr,
         cnote: _cnote,
         isShowToolbar: true,
-      })
+      }
       case DELETE_NOTE:
         let newnotes = state.notes.filter(item => item.id !== action.id)
         setStorage('notes', JSON.stringify(newnotes))
         setStorage('cnote', {})
         setStorage('isShowToolbar', false)
-
-        return Object.assign({}, state, {
+        return {
+          ...state,
           notes: newnotes,
           cnote: {},
           isShowToolbar: false,
-        })
+        }
       case SHOW_LAYER:
-        return Object.assign({}, state, {
-         isShowLayer: action.isShowLayer,
-        })
+        return {
+          ...state,
+          isShowLayer: action.isShowLayer,
+        }
       case SHOW_EDITER:
-        return Object.assign({}, state, {
+        return {
+          ...state,
           isShowEditer: action.isShowEditer,
-        })
+        }
       default:
         return state
   }

@@ -8,20 +8,17 @@ html{
   font-size: 14px;
   line-height: 1.5;
   -ms-text-size-adjust: 100%;
+  /* 移动端横屏字体保持原样 */
   -webkit-text-size-adjust: 100%;
 }
 
-*:active{
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
 @font-face {
-  font-family: 'iconfont';  /* project id 267234 */
-  src: url('//at.alicdn.com/t/font_bpfbfrt4hdea5rk9.eot');
-  src: url('//at.alicdn.com/t/font_bpfbfrt4hdea5rk9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_bpfbfrt4hdea5rk9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_bpfbfrt4hdea5rk9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_bpfbfrt4hdea5rk9.svg#iconfont') format('svg');
+  font-family: 'iconfont';  /* project id 454757 */
+  src: url('//at.alicdn.com/t/font_454757_u4utyr9newmi.eot');
+  src: url('//at.alicdn.com/t/font_454757_u4utyr9newmi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_454757_u4utyr9newmi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_454757_u4utyr9newmi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_454757_u4utyr9newmi.svg#iconfont') format('svg');
 }
 
 .iconfont{

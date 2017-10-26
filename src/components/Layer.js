@@ -36,10 +36,10 @@ class Layer extends Component  {
           <h3>新增</h3>
           <i title="保存"
              className="iconfont icon-save"
-             onClick={this.saveNote.bind(this, this.state.title, this.state.content)}>&#xe8c5;</i>
+             onClick={this.saveNote.bind(this, this.state.title, this.state.content)}>&#xe664;</i>
           <i title="关闭"
              className="iconfont icon-close"
-             onClick={this.props.closeLayerWrap}>&#xe86d;</i>
+             onClick={this.props.closeLayerWrap}>&#xe641;</i>
           <div className="input-box">
             <input
               type="text"

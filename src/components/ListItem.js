@@ -16,7 +16,7 @@ class ListItem extends Component {
         <div className="note-box"></div>
           <h3 className="note-title">{this.props.title}</h3>
           <p>{this.props.content}</p>
-          <span><i className="iconfont">&#xe64d;</i>{this.props.time}</span>
+          <span><i className="iconfont">&#xe62c;</i> {this.props.time}</span>
       </li>
     )
   }

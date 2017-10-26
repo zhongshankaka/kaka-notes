@@ -37,7 +37,7 @@ class List extends Component {
           title="新增"
           className="add-new"
           onClick={() => addBtnClick(!isShowLayer)}>
-          <i className="iconfont">&#xe889;</i>
+          <i className="iconfont">&#xe6df;</i>
         </span>
       </div>
     )

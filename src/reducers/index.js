@@ -103,6 +103,7 @@ const noteApp = (state = initialState, action) => {
         return {
           ...state,
           isShowEditer: action.isShowEditer,
+          isShowToolbar: true,
         }
       default:
         return state

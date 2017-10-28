@@ -1,6 +1,7 @@
 {
   "name": "kaka-notes",
   "version": "0.1.0",
+  "homepage" : "http://zhongshankaka.github.io/kaka-notes",
   "private": true,
   "dependencies": {
     "github-markdown-css": "^2.8.0",
